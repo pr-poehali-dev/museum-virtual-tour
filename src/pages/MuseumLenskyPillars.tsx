@@ -45,7 +45,7 @@ const MuseumLenskyPillars = () => {
       description:
         "Уникальные песчаные массивы в условиях вечной мерзлоты - настоящий природный феномен Севера.",
       image:
-        "https://images.unsplash.com/photo-1509316785289-025f5b846b35?w=800&h=600&fit=crop",
+        "https://cdn.poehali.dev/files/6ec562de-771d-428c-8bc6-379540ebf4ef.jpg",
       audioText:
         "Эти северные пустыни - результат тысячелетних ветров. Летом здесь можно встретить редких животных.",
       duration: "3:00",
