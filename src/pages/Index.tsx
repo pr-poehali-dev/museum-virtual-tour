@@ -1,52 +1,199 @@
-import React from "react";
+import { useNavigate } from "react-router-dom";
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
 import Icon from "@/components/ui/icon";
 
 const Index = () => {
+  const navigate = useNavigate();
+  const museums = [
+    {
+      id: 1,
+      name: "Ленские столбы",
+      location: "Республика Саха (Якутия)",
+      description:
+        "Уникальные скальные образования на берегу реки Лена, внесенные в список Всемирного наследия ЮНЕСКО",
+      image:
+        "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=800&h=600&fit=crop",
+      exhibits: 12,
+      duration: "45 мин",
+    },
+    {
+      id: 2,
+      name: "Государственный Эрмитаж",
+      location: "Санкт-Петербург, Россия",
+      description:
+        "Один из крупнейших и самых значительных художественных и культурно-исторических музеев мира",
+      image:
+        "https://images.unsplash.com/photo-1520637836862-4d197d17c958?w=800&h=600&fit=crop",
+      exhibits: 24,
+      duration: "90 мин",
+    },
+    {
+      id: 3,
+      name: "Лувр",
+      location: "Париж, Франция",
+      description:
+        "Самый посещаемый музей мира с бесценными произведениями искусства, включая Мону Лизу",
+      image:
+        "https://images.unsplash.com/photo-1499856871958-5b9627545d1a?w=800&h=600&fit=crop",
+      exhibits: 18,
+      duration: "75 мин",
+    },
+  ];
+
+  const handleStartTour = (museumName: string) => {
+    if (museumName === "Государственный Эрмитаж") {
+      navigate("/museum/hermitage");
+    } else if (museumName === "Ленские столбы") {
+      navigate("/museum/lenskyPillars");
+    } else if (museumName === "Лувр") {
+      navigate("/museum/louvre");
+    } else {
+      alert(`Скоро откроется экскурсия по ${museumName}!`);
+    }
+  };
+
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen bg-gradient-to-br from-slate-50 to-indigo-50">
       {/* Hero Section */}
-      <section className="bg-gradient-to-br from-purple-600 via-purple-700 to-indigo-800 text-white py-20">
-        <div className="container mx-auto px-6 text-center">
-          <h1 className="text-5xl font-bold mb-6">Виртуальные музеи мира</h1>
-          <p className="text-xl mb-8 text-purple-100 max-w-2xl mx-auto">
-            Исследуйте величайшие музеи планеты не выходя из дома. Погрузитесь в
-            мир искусства, истории и культуры.
+      <section className="relative overflow-hidden bg-gradient-to-r from-indigo-900 via-purple-900 to-pink-900 text-white">
+        <div className="absolute inset-0 bg-black/20"></div>
+        <div className="relative container mx-auto px-4 py-24 text-center">
+          <div className="max-w-4xl mx-auto">
+            <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-white to-purple-200 bg-clip-text text-transparent">
+              Виртуальные Экскурсии
+            </h1>
+            <p className="text-xl md:text-2xl mb-8 text-purple-100 leading-relaxed">
+              Откройте для себя величайшие музеи мира, не выходя из дома.
+              Погрузитесь в историю и искусство с аудио-гидом.
+            </p>
+            <div className="flex items-center justify-center gap-6 text-purple-200">
+              <div className="flex items-center gap-2">
+                <Icon name="Headphones" size={20} />
+                <span>Аудио-рассказы</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <Icon name="Camera" size={20} />
+                <span>HD качество</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <Icon name="Globe" size={20} />
+                <span>3 музея</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Museums Grid */}
+      <section className="container mx-auto px-4 py-16">
+        <div className="text-center mb-12">
+          <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-4">
+            Выберите музей для экскурсии
+          </h2>
+          <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+            Каждая экскурсия включает уникальные экспонаты с профессиональными
+            аудио-комментариями
           </p>
-          <button className="bg-white text-purple-700 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-purple-50 transition-colors">
-            Начать путешествие
-          </button>
+        </div>
+
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
+          {museums.map((museum) => (
+            <Card
+              key={museum.id}
+              className="group overflow-hidden border-0 shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 bg-white"
+            >
+              <div className="relative overflow-hidden">
+                <img
+                  src={museum.image}
+                  alt={museum.name}
+                  className="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-500"
+                />
+                <div className="absolute top-4 right-4 bg-white/90 backdrop-blur-sm px-3 py-1 rounded-full">
+                  <span className="text-sm font-medium text-gray-700">
+                    {museum.duration}
+                  </span>
+                </div>
+              </div>
+
+              <CardHeader className="pb-3">
+                <CardTitle className="text-xl font-bold text-gray-800 group-hover:text-purple-600 transition-colors">
+                  {museum.name}
+                </CardTitle>
+                <CardDescription className="text-purple-600 font-medium flex items-center gap-1">
+                  <Icon name="MapPin" size={16} />
+                  {museum.location}
+                </CardDescription>
+              </CardHeader>
+
+              <CardContent className="pt-0">
+                <p className="text-gray-600 mb-4 leading-relaxed">
+                  {museum.description}
+                </p>
+
+                <div className="flex items-center justify-between mb-6">
+                  <div className="flex items-center gap-4 text-sm text-gray-500">
+                    <div className="flex items-center gap-1">
+                      <Icon name="Image" size={16} />
+                      <span>{museum.exhibits} экспонатов</span>
+                    </div>
+                    <div className="flex items-center gap-1">
+                      <Icon name="Headphones" size={16} />
+                      <span>Аудио-гид</span>
+                    </div>
+                  </div>
+                </div>
+
+                <Button
+                  onClick={() => handleStartTour(museum.name)}
+                  className="w-full bg-gradient-to-r from-purple-600 to-indigo-600 hover:from-purple-700 hover:to-indigo-700 text-white font-medium py-3 rounded-lg transition-all duration-300 group-hover:shadow-lg"
+                >
+                  <Icon name="Play" size={20} className="mr-2" />
+                  Начать экскурсию
+                </Button>
+              </CardContent>
+            </Card>
+          ))}
         </div>
       </section>
 
       {/* Features Section */}
-      <section className="py-16 bg-gray-50">
-        <div className="container mx-auto px-6">
-          <h2 className="text-3xl font-bold text-center text-gray-800 mb-12">
-            Почему выбирают нас
-          </h2>
+      <section className="bg-gray-50 py-16">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-12">
+            <h3 className="text-2xl font-bold text-gray-800 mb-4">
+              Почему выбирают наши экскурсии?
+            </h3>
+          </div>
 
-          <div className="grid md:grid-cols-3 gap-8">
+          <div className="grid md:grid-cols-3 gap-8 max-w-4xl mx-auto">
             <div className="text-center">
               <div className="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                <Icon name="Globe" size={32} className="text-purple-600" />
+                <Icon name="Headphones" size={32} className="text-purple-600" />
               </div>
               <h4 className="font-semibold text-gray-800 mb-2">
-                Музеи всего мира
+                Профессиональный аудио-гид
               </h4>
               <p className="text-gray-600 text-sm">
-                Более 100 известных музеев из разных стран
+                Экспертные рассказы о каждом экспонате от искусствоведов
               </p>
             </div>
 
             <div className="text-center">
               <div className="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                <Icon name="Eye" size={32} className="text-purple-600" />
+                <Icon name="Zap" size={32} className="text-purple-600" />
               </div>
               <h4 className="font-semibold text-gray-800 mb-2">
-                Высокое качество
+                Интерактивность
               </h4>
               <p className="text-gray-600 text-sm">
-                HD изображения и виртуальные туры 360°
+                Управляйте темпом экскурсии и изучайте детали
               </p>
             </div>
 
@@ -60,78 +207,6 @@ const Index = () => {
               <p className="text-gray-600 text-sm">
                 Посещайте музеи в любое удобное время
               </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Museums Grid Section */}
-      <section className="py-16 bg-white">
-        <div className="container mx-auto px-6">
-          <h2 className="text-3xl font-bold text-center text-gray-800 mb-12">
-            Популярные музеи
-          </h2>
-
-          <div className="grid md:grid-cols-3 gap-8">
-            {/* Эрмитаж */}
-            <div className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow">
-              <img
-                src="https://images.unsplash.com/photo-1520637836862-4d197d17c90a?w=400&h=300&fit=crop"
-                alt="Эрмитаж"
-                className="w-full h-48 object-cover"
-              />
-              <div className="p-6">
-                <h3 className="text-xl font-bold text-gray-800 mb-2">
-                  Эрмитаж
-                </h3>
-                <p className="text-gray-600 mb-4">
-                  Один из крупнейших и самых значительных художественных и
-                  культурно-исторических музеев мира
-                </p>
-                <button className="bg-purple-600 text-white px-4 py-2 rounded hover:bg-purple-700 transition-colors">
-                  Посетить виртуально
-                </button>
-              </div>
-            </div>
-
-            {/* Лувр */}
-            <div className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow">
-              <img
-                src="https://images.unsplash.com/photo-1539650116574-75c0c6d73c6e?w=400&h=300&fit=crop"
-                alt="Лувр"
-                className="w-full h-48 object-cover"
-              />
-              <div className="p-6">
-                <h3 className="text-xl font-bold text-gray-800 mb-2">Лувр</h3>
-                <p className="text-gray-600 mb-4">
-                  Самый посещаемый музей мира и памятник архитектуры. Дом для
-                  Моны Лизы и тысяч шедевров
-                </p>
-                <button className="bg-purple-600 text-white px-4 py-2 rounded hover:bg-purple-700 transition-colors">
-                  Посетить виртуально
-                </button>
-              </div>
-            </div>
-
-            {/* Ленские столбы */}
-            <div className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow">
-              <img
-                src="https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=400&h=300&fit=crop"
-                alt="Ленские столбы"
-                className="w-full h-48 object-cover"
-              />
-              <div className="p-6">
-                <h3 className="text-xl font-bold text-gray-800 mb-2">
-                  Ленские столбы
-                </h3>
-                <p className="text-gray-600 mb-4">
-                  Природный парк в России, объект Всемирного наследия ЮНЕСКО с
-                  уникальными скальными образованиями
-                </p>
-                <button className="bg-purple-600 text-white px-4 py-2 rounded hover:bg-purple-700 transition-colors">
-                  Посетить виртуально
-                </button>
-              </div>
             </div>
           </div>
         </div>
