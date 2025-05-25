@@ -64,6 +64,78 @@ const Index = () => {
           </div>
         </div>
       </section>
+
+      {/* Museums Grid Section */}
+      <section className="py-16 bg-white">
+        <div className="container mx-auto px-6">
+          <h2 className="text-3xl font-bold text-center text-gray-800 mb-12">
+            Популярные музеи
+          </h2>
+
+          <div className="grid md:grid-cols-3 gap-8">
+            {/* Эрмитаж */}
+            <div className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow">
+              <img
+                src="https://images.unsplash.com/photo-1520637836862-4d197d17c90a?w=400&h=300&fit=crop"
+                alt="Эрмитаж"
+                className="w-full h-48 object-cover"
+              />
+              <div className="p-6">
+                <h3 className="text-xl font-bold text-gray-800 mb-2">
+                  Эрмитаж
+                </h3>
+                <p className="text-gray-600 mb-4">
+                  Один из крупнейших и самых значительных художественных и
+                  культурно-исторических музеев мира
+                </p>
+                <button className="bg-purple-600 text-white px-4 py-2 rounded hover:bg-purple-700 transition-colors">
+                  Посетить виртуально
+                </button>
+              </div>
+            </div>
+
+            {/* Лувр */}
+            <div className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow">
+              <img
+                src="https://images.unsplash.com/photo-1539650116574-75c0c6d73c6e?w=400&h=300&fit=crop"
+                alt="Лувр"
+                className="w-full h-48 object-cover"
+              />
+              <div className="p-6">
+                <h3 className="text-xl font-bold text-gray-800 mb-2">Лувр</h3>
+                <p className="text-gray-600 mb-4">
+                  Самый посещаемый музей мира и памятник архитектуры. Дом для
+                  Моны Лизы и тысяч шедевров
+                </p>
+                <button className="bg-purple-600 text-white px-4 py-2 rounded hover:bg-purple-700 transition-colors">
+                  Посетить виртуально
+                </button>
+              </div>
+            </div>
+
+            {/* Ленские столбы */}
+            <div className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow">
+              <img
+                src="https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=400&h=300&fit=crop"
+                alt="Ленские столбы"
+                className="w-full h-48 object-cover"
+              />
+              <div className="p-6">
+                <h3 className="text-xl font-bold text-gray-800 mb-2">
+                  Ленские столбы
+                </h3>
+                <p className="text-gray-600 mb-4">
+                  Природный парк в России, объект Всемирного наследия ЮНЕСКО с
+                  уникальными скальными образованиями
+                </p>
+                <button className="bg-purple-600 text-white px-4 py-2 rounded hover:bg-purple-700 transition-colors">
+                  Посетить виртуально
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
     </div>
   );
 };
