@@ -147,17 +147,13 @@ const MuseumLenskyPillars = () => {
           </div>
         </CardContent>
       </Card>
-            </div>
-          </div>
-        </CardContent>
-      </Card>
 
-              {/* Location Navigation */}
-              <div className="grid grid-cols-3 gap-3">
-                {locations.map((location, index) => (
-                  <button
-                    key={location.id}
-                    onClick={() => setCurrentLocation(index)}
+      {/* Location Navigation */}
+      <div className="grid grid-cols-3 gap-3">
+        {locations.map((location, index) => (
+          <button
+            key={location.id}
+            onClick={() => setCurrentLocation(index)}
                     className={`p-2 rounded-lg border transition-all ${
                       index === currentLocation
                         ? "border-emerald-600 bg-emerald-50"
