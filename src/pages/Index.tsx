@@ -48,62 +48,62 @@ const Index = () => {
   ];
 
   const handleStartTour = (museumName: string) => {
-    if (museumName === "Государственный Эрмитаж") {
-      navigate("/museum/hermitage");
-    } else if (museumName === "Ленские столбы") {
-      navigate("/museum/lenskyPillars");
-    } else if (museumName === "Лувр") {
-      navigate("/museum/louvre");
-    } else {
-      alert(`Скоро откроется экскурсия по ${museumName}!`);
-    }
+    console.log(`Начинаем экскурсию: ${museumName}`);
   };
 
+  const hermitagePhotos = [
+    {
+      url: "https://images.unsplash.com/photo-1584464491033-06628f3a6b7b?w=800&h=600&fit=crop",
+      title: "Зимний дворец - фасад Эрмитажа",
+    },
+    {
+      url: "https://images.unsplash.com/photo-1571043733612-d5444ff06921?w=800&h=600&fit=crop",
+      title: "Георгиевский зал",
+    },
+    {
+      url: "https://images.unsplash.com/photo-1520637736862-4d197d17c958?w=800&h=600&fit=crop",
+      title: "Главная лестница",
+    },
+  ];
+
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-50 to-indigo-50">
+    <div className="container mx-auto px-4 py-8">
       {/* Hero Section */}
-      <section className="relative overflow-hidden bg-gradient-to-r from-indigo-900 via-purple-900 to-pink-900 text-white">
-        <div className="absolute inset-0 bg-black/20"></div>
-        <div className="relative container mx-auto px-4 py-24 text-center">
-          <div className="max-w-4xl mx-auto">
-            <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-white to-purple-200 bg-clip-text text-transparent">
-              Виртуальные Экскурсии
-            </h1>
-            <p className="text-xl md:text-2xl mb-8 text-purple-100 leading-relaxed">
-              Откройте для себя величайшие музеи мира, не выходя из дома.
-              Погрузитесь в историю и искусство с аудио-гидом.
-            </p>
-            <div className="flex items-center justify-center gap-6 text-purple-200">
-              <div className="flex items-center gap-2">
-                <Icon name="Headphones" size={20} />
-                <span>Аудио-рассказы</span>
-              </div>
-              <div className="flex items-center gap-2">
-                <Icon name="Camera" size={20} />
-                <span>HD качество</span>
-              </div>
-              <div className="flex items-center gap-2">
-                <Icon name="Globe" size={20} />
-                <span>3 музея</span>
+      <div className="text-center mb-12">
+        <h1 className="text-4xl font-bold text-gray-900 mb-4">
+          Виртуальные музейные экскурсии
+        </h1>
+        <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+          Исследуйте самые известные музеи мира не выходя из дома
+        </p>
+      </div>
+
+      {/* Hermitage Photo Gallery */}
+      <div className="mb-16">
+        <h2 className="text-3xl font-bold text-center mb-8 text-gray-900">
+          Государственный Эрмитаж
+        </h2>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+          {hermitagePhotos.map((photo, index) => (
+            <div key={index} className="group relative overflow-hidden rounded-xl">
+              <img
+                src={photo.url}
+                alt={photo.title}
+                className="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-105"
+              />
+              <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-30 transition-all duration-300 flex items-end">
+                <div className="p-4 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                  <h3 className="font-semibold">{photo.title}</h3>
+                </div>
               </div>
             </div>
-          </div>
+          ))}
         </div>
-      </section>
+      </div>
 
       {/* Museums Grid */}
-      <section className="container mx-auto px-4 py-16">
-        <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-4">
-            Выберите музей для экскурсии
-          </h2>
-          <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-            Каждая экскурсия включает уникальные экспонаты с профессиональными
-            аудио-комментариями
-          </p>
-        </div>
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
           {museums.map((museum) => (
             <Card
               key={museum.id}
