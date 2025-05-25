@@ -143,21 +143,14 @@ const MuseumLenskyPillars = () => {
                 audioText={current.audioText}
                 className="bg-gradient-to-r from-emerald-100 to-teal-100 border-emerald-200"
               />
-                    >
-                      <Icon
-                        name={isPlaying ? "Pause" : "Play"}
-                        size={20}
-                        className="mr-2"
-                      />
-                      {isPlaying ? "Пауза" : "Слушать"}
-                    </Button>
-
-                    <div className="flex-1 bg-emerald-200 rounded-full h-2">
-                      <div className="bg-emerald-600 h-2 rounded-full w-1/3"></div>
-                    </div>
-                  </div>
-                </CardContent>
-              </Card>
+            </div>
+          </div>
+        </CardContent>
+      </Card>
+            </div>
+          </div>
+        </CardContent>
+      </Card>
 
               {/* Location Navigation */}
               <div className="grid grid-cols-3 gap-3">
