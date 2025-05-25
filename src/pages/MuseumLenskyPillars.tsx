@@ -149,29 +149,29 @@ const MuseumLenskyPillars = () => {
       </div>
 
       {/* Location Navigation */}
-      <div className="grid grid-cols-3 gap-3">
-        {locations.map((location, index) => (
-          <button
-            key={location.id}
-            onClick={() => setCurrentLocation(index)}
-                    className={`p-2 rounded-lg border transition-all ${
-                      index === currentLocation
-                        ? "border-emerald-600 bg-emerald-50"
-                        : "border-gray-200 hover:border-emerald-300"
-                    }`}
-                  >
-                    <img
-                      src={location.image}
-                      alt={location.title}
-                      className="w-full h-16 object-cover rounded"
-                    />
-                    <p className="text-xs text-gray-600 mt-1 truncate">
-                      {location.title}
-                    </p>
-                  </button>
-                ))}
-              </div>
-            </div>
+      <div className="container mx-auto px-4 pb-8">
+        <div className="max-w-6xl mx-auto">
+          <div className="grid grid-cols-3 gap-3">
+            {locations.map((location, index) => (
+              <button
+                key={location.id}
+                onClick={() => setCurrentLocation(index)}
+                className={`p-2 rounded-lg border transition-all ${
+                  index === currentLocation
+                    ? "border-emerald-600 bg-emerald-50"
+                    : "border-gray-200 hover:border-emerald-300"
+                }`}
+              >
+                <img
+                  src={location.image}
+                  alt={location.title}
+                  className="w-full h-16 object-cover rounded"
+                />
+                <p className="text-xs text-gray-600 mt-1 truncate">
+                  {location.title}
+                </p>
+              </button>
+            ))}
           </div>
         </div>
       </div>
