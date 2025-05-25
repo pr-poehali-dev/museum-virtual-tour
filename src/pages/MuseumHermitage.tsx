@@ -44,7 +44,7 @@ const MuseumHermitage = () => {
       description:
         "Один из шедевров позднего творчества Тициана. Картина изображает раскаявшуюся грешницу в момент духовного преображения.",
       image:
-        "https://cdn.poehali.dev/files/titian-mary-magdalene-hermitage.jpg",
+        "https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=800&h=600&fit=crop&crop=center",
       audioText:
         "Тициан создал это произведение в зрелые годы, мастерски передав эмоциональную глубину покаяния. Обратите внимание на драматическое освещение и выразительность жеста.",
       duration: "3:45",
