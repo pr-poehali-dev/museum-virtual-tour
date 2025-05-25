@@ -31,7 +31,7 @@ const MuseumHermitage = () => {
       description:
         "Шедевр позднего творчества Рембрандта, одна из самых трогательных картин в мировом искусстве.",
       image:
-        "https://images.unsplash.com/photo-1541961017774-22349e4a1262?w=800&h=600&fit=crop",
+        "https://cdn.poehali.dev/files/661febde-0000-48be-9c09-164c8fbbf2cc.jpg",
       audioText:
         "Рембрандт создал эту картину в последние годы жизни. Мастерски передано прощение и безусловная любовь отца к сыну.",
       duration: "3:15",
