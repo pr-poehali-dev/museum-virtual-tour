@@ -145,8 +145,8 @@ const MuseumLenskyPillars = () => {
               />
             </div>
           </div>
-        </CardContent>
-      </Card>
+        </div>
+      </div>
 
       {/* Location Navigation */}
       <div className="grid grid-cols-3 gap-3">
