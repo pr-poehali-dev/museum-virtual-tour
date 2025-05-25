@@ -1,3 +1,4 @@
+import { useNavigate } from "react-router-dom";
 import {
   Card,
   CardContent,
@@ -9,6 +10,7 @@ import { Button } from "@/components/ui/button";
 import Icon from "@/components/ui/icon";
 
 const Index = () => {
+  const navigate = useNavigate();
   const museums = [
     {
       id: 1,
@@ -46,8 +48,11 @@ const Index = () => {
   ];
 
   const handleStartTour = (museumName: string) => {
-    // Здесь будет навигация к странице музея
-    alert(`Скоро откроется экскурсия по ${museumName}!`);
+    if (museumName === "Государственный Эрмитаж") {
+      navigate("/museum/hermitage");
+    } else {
+      alert(`Скоро откроется экскурсия по ${museumName}!`);
+    }
   };
 
   return (
