@@ -1,8 +1,9 @@
 import { useState } from "react";
-import { Button } from "@/components/ui/button";
-import { Card, CardContent } from "@/components/ui/card";
-import Icon from "@/components/ui/icon";
 import { useNavigate } from "react-router-dom";
+import { Card, CardContent } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
+import Icon from "@/components/ui/icon";
+import AudioPlayer from "@/components/AudioPlayer";
 
 const MuseumLenskyPillars = () => {
   const navigate = useNavigate();
@@ -136,27 +137,12 @@ const MuseumLenskyPillars = () => {
                 {current.description}
               </p>
 
-              {/* Audio Player */}
-              <Card className="bg-gradient-to-r from-emerald-100 to-teal-100 border-emerald-200">
-                <CardContent className="p-6">
-                  <div className="flex items-center justify-between mb-4">
-                    <h3 className="font-semibold text-gray-800 flex items-center gap-2">
-                      <Icon name="Headphones" size={20} />
-                      Аудио-рассказ
-                    </h3>
-                    <span className="text-sm text-gray-600">
-                      {current.duration}
-                    </span>
-                  </div>
-
-                  <p className="text-gray-700 mb-4 italic">
-                    "{current.audioText}"
-                  </p>
-
-                  <div className="flex items-center gap-4">
-                    <Button
-                      onClick={toggleAudio}
-                      className="bg-emerald-600 hover:bg-emerald-700 text-white"
+              <AudioPlayer
+                title="Аудио-рассказ"
+                duration={current.duration}
+                audioText={current.audioText}
+                className="bg-gradient-to-r from-emerald-100 to-teal-100 border-emerald-200"
+              />
                     >
                       <Icon
                         name={isPlaying ? "Pause" : "Play"}
