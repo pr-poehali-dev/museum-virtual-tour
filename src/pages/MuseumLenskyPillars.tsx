@@ -32,7 +32,7 @@ const MuseumLenskyPillars = () => {
       description:
         "Место слияния рек, где открывается потрясающий вид на весь комплекс Ленских столбов.",
       image:
-        "https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=800&h=600&fit=crop",
+        "https://cdn.poehali.dev/files/2a4b8c5d-9e3f-412a-8bc7-6d4e8f9a0b1c.jpg",
       audioText:
         "Здесь древние воды Лены встречаются с притоком Буотама. Это священное место для народов Якутии.",
       duration: "2:45",
