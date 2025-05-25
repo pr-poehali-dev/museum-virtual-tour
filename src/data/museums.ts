@@ -19,7 +19,7 @@ export const museums: Museum[] = [
     description:
       "Один из крупнейших и самых значительных художественных и культурно-исторических музеев мира",
     image:
-      "https://images.unsplash.com/photo-1520637836862-4d197d17c958?w=800&h=600&fit=crop",
+      "https://images.unsplash.com/photo-1571089864657-c645fcaa8b92?w=800&h=600&fit=crop",
     exhibits: 24,
     duration: "90 мин",
   },
