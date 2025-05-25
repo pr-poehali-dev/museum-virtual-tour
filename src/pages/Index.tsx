@@ -50,6 +50,10 @@ const Index = () => {
   const handleStartTour = (museumName: string) => {
     if (museumName === "Государственный Эрмитаж") {
       navigate("/museum/hermitage");
+    } else if (museumName === "Ленские столбы") {
+      navigate("/museum/lenskyPillars");
+    } else if (museumName === "Лувр") {
+      navigate("/museum/louvre");
     } else {
       alert(`Скоро откроется экскурсия по ${museumName}!`);
     }
