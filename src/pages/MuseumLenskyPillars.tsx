@@ -19,7 +19,7 @@ const MuseumLenskyPillars = () => {
       description:
         "Самый высокий и величественный столб, названный так за свою мощную форму, напоминающую фигуру старца.",
       image:
-        "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=800&h=600&fit=crop",
+        "https://cdn.poehali.dev/files/ce08fe40-8e39-401f-bff3-4c537329999e.jpg",
       audioText:
         "Этот величественный каменный гигант формировался миллионы лет. Его слои рассказывают историю нашей планеты.",
       duration: "3:20",
