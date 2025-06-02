@@ -8,6 +8,7 @@ export const useMuseumNavigation = () => {
       "Государственный Эрмитаж": "/museum/hermitage",
       "Ленские столбы": "/museum/lenskyPillars",
       Лувр: "/museum/louvre",
+      "Россия моя история": "/museum/russiaMyHistory",
     };
 
     const route = routes[museumName];

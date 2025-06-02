@@ -34,4 +34,15 @@ export const museums: Museum[] = [
     exhibits: 18,
     duration: "75 мин",
   },
+  {
+    id: 4,
+    name: "Россия моя история",
+    location: "Республика Саха (Якутия)",
+    description:
+      "Мультимедийный исторический парк, рассказывающий о богатой истории России и уникальной культуре народа Саха",
+    image:
+      "https://images.unsplash.com/photo-1518709268805-4e9042af2176?w=800&h=600&fit=crop",
+    exhibits: 16,
+    duration: "60 мин",
+  },
 ];

@@ -3,6 +3,7 @@ import Index from "@/pages/Index";
 import MuseumHermitage from "@/pages/MuseumHermitage";
 import MuseumLenskyPillars from "@/pages/MuseumLenskyPillars";
 import MuseumLouvre from "@/pages/MuseumLouvre";
+import MuseumRussiaMyHistory from "@/pages/MuseumRussiaMyHistory";
 
 function App() {
   return (
@@ -12,6 +13,10 @@ function App() {
         <Route path="/museum/hermitage" element={<MuseumHermitage />} />
         <Route path="/museum/lenskyPillars" element={<MuseumLenskyPillars />} />
         <Route path="/museum/louvre" element={<MuseumLouvre />} />
+        <Route
+          path="/museum/russiaMyHistory"
+          element={<MuseumRussiaMyHistory />}
+        />
       </Routes>
     </Router>
   );
