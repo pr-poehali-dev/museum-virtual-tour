@@ -8,7 +8,7 @@ export const museums: Museum[] = [
     description:
       "Уникальные скальные образования на берегу реки Лена, внесенные в список Всемирного наследия ЮНЕСКО",
     image:
-      "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=800&h=600&fit=crop",
+      "https://cdn.poehali.dev/files/a9c3d5c8-d849-420d-9cf6-8113d25fe7dc.jpg",
     exhibits: 12,
     duration: "45 мин",
   },
