@@ -19,7 +19,7 @@ export const museums: Museum[] = [
     description:
       "Один из крупнейших и самых значительных художественных и культурно-исторических музеев мира",
     image:
-      "https://images.unsplash.com/photo-1571089864657-c645fcaa8b92?w=800&h=600&fit=crop",
+      "https://images.unsplash.com/photo-1560969184-10fe8719e047?w=800&h=600&fit=crop",
     exhibits: 24,
     duration: "90 мин",
   },
@@ -41,7 +41,7 @@ export const museums: Museum[] = [
     description:
       "Мультимедийный исторический парк, рассказывающий о богатой истории России и уникальной культуре народа Саха",
     image:
-      "https://images.unsplash.com/photo-1518709268805-4e9042af2176?w=800&h=600&fit=crop",
+      "https://images.unsplash.com/photo-1595854341625-f33ee10dbf94?w=800&h=600&fit=crop",
     exhibits: 16,
     duration: "60 мин",
   },
