@@ -194,7 +194,7 @@ export default function MuseumRussiaMyHistory() {
               <div className="grid md:grid-cols-2 gap-6">
                 <div>
                   <img
-                    src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=500&h=300&fit=crop"
+                    src="https://cdn.poehali.dev/files/d8a309e5-76a4-444d-9a15-c55ac173d024.jpg"
                     alt="Герои Якутии"
                     className="w-full h-48 object-cover rounded-lg"
                   />
