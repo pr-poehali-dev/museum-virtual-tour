@@ -122,6 +122,12 @@ const MuseumLouvre = () => {
     },
   ];
 
+  const toggleAudio = () => {
+    setIsPlaying(!isPlaying);
+  };
+    setIsPlaying(!isPlaying);
+  };
+
   const additionalArtworks = [
     {
       id: 4,
@@ -154,6 +160,12 @@ const MuseumLouvre = () => {
   ];
 
   const toggleAudio = () => {
+    setIsPlaying(!isPlaying);
+  };
+
+  const toggleAudio = () => {
+    setIsPlaying(!isPlaying);
+  };
     if (isPlaying) {
       stopAudio();
     } else {
