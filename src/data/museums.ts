@@ -41,7 +41,7 @@ export const museums: Museum[] = [
     description:
       "Мультимедийный исторический парк, рассказывающий о богатой истории России и уникальной культуре народа Саха",
     image:
-      "https://images.unsplash.com/photo-1595854341625-f33ee10dbf94?w=800&h=600&fit=crop",
+      "https://cdn.poehali.dev/files/e45f3176-1105-4a59-b240-4669f2a63b08.jpg",
     exhibits: 16,
     duration: "60 мин",
   },
