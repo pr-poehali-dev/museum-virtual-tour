@@ -235,8 +235,8 @@ export default function MuseumRussiaMyHistory() {
               <div className="grid md:grid-cols-2 gap-6">
                 <div>
                   <img
-                    src="https://images.unsplash.com/photo-1515238152791-8216bfdf89a7?w=500&h=300&fit=crop"
-                    alt="Алмазы Якутии"
+                    src="https://cdn.poehali.dev/files/ab32fa1e-e931-4b7f-abee-99062fb1b95e.jpeg"
+                    alt="Природные богатства Якутии"
                     className="w-full h-48 object-cover rounded-lg"
                   />
                 </div>
