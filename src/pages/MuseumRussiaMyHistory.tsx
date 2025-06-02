@@ -71,7 +71,7 @@ export default function MuseumRussiaMyHistory() {
               <div className="grid md:grid-cols-2 gap-6">
                 <div>
                   <img
-                    src="https://images.unsplash.com/photo-1576089073624-7b6b5f0e6a6e?w=500&h=300&fit=crop"
+                    src="https://cdn.poehali.dev/files/5034108a-97dd-4027-b9c2-3b9d494be9be.jpg"
                     alt="Российская империя"
                     className="w-full h-48 object-cover rounded-lg"
                   />
