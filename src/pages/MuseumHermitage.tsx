@@ -1,8 +1,9 @@
 import { useState } from "react";
-import { Button } from "@/components/ui/button";
-import { Card, CardContent } from "@/components/ui/card";
-import Icon from "@/components/ui/icon";
 import { useNavigate } from "react-router-dom";
+import { Card } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
+import Icon from "@/components/ui/icon";
+import AudioPlayer from "@/components/AudioPlayer";
 
 const MuseumHermitage = () => {
   const navigate = useNavigate();
@@ -165,42 +166,13 @@ const MuseumHermitage = () => {
                 {current.description}
               </p>
 
-              {/* Audio Player */}
-              <Card className="bg-gradient-to-r from-amber-100 to-orange-100 border-amber-200">
-                <CardContent className="p-6">
-                  <div className="flex items-center justify-between mb-4">
-                    <h3 className="font-semibold text-gray-800 flex items-center gap-2">
-                      <Icon name="Headphones" size={20} />
-                      Аудио-рассказ
-                    </h3>
-                    <span className="text-sm text-gray-600">
-                      {current.duration}
-                    </span>
-                  </div>
-
-                  <p className="text-gray-700 mb-4 italic">
-                    "{current.audioText}"
-                  </p>
-
-                  <div className="flex items-center gap-4">
-                    <Button
-                      onClick={toggleAudio}
-                      className="bg-amber-600 hover:bg-amber-700 text-white"
-                    >
-                      <Icon
-                        name={isPlaying ? "Pause" : "Play"}
-                        size={20}
-                        className="mr-2"
-                      />
-                      {isPlaying ? "Пауза" : "Слушать"}
-                    </Button>
-
-                    <div className="flex-1 bg-amber-200 rounded-full h-2">
-                      <div className="bg-amber-600 h-2 rounded-full w-1/3"></div>
-                    </div>
-                  </div>
-                </CardContent>
-              </Card>
+              {/* Audio Guide */}
+              <AudioPlayer
+                title="Аудиогид"
+                duration={current.duration}
+                audioText={current.audioText}
+                className="mt-6"
+              />
 
               {/* Artwork Navigation */}
               <div className="grid grid-cols-3 gap-3">
