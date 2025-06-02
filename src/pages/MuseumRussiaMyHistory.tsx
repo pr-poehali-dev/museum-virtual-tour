@@ -105,19 +105,17 @@ export default function MuseumRussiaMyHistory() {
           <Card className="overflow-hidden">
             <CardHeader className="bg-gradient-to-r from-blue-100 to-blue-50">
               <CardTitle className="flex items-center gap-3 text-2xl">
-                <Icon name="Mountain" size={24} className="text-blue-600" />
+                <Icon name="Users" className="text-blue-600" />
                 Культура народа Саха
               </CardTitle>
             </CardHeader>
-            <CardContent className="p-6 space-y-6">
+            <CardContent className="p-0">
               <div className="grid md:grid-cols-2 gap-6">
-                <div>
-                  <img
-                    src="https://cdn.poehali.dev/files/5034108a-97dd-4027-b9c2-3b9d494be9be.jpg"
-                    alt="Культура Саха"
-                    className="w-full h-48 object-cover rounded-lg"
-                  />
-                </div>
+                <img
+                  src="https://cdn.poehali.dev/files/df33e9b5-1f95-42eb-b670-82518f3f1ca1.jpg"
+                  alt="Народные танцы саха в традиционных костюмах"
+                  className="w-full h-64 object-cover"
+                />
                 <div className="space-y-4">
                   <p className="text-gray-700 leading-relaxed">
                     Древние традиции якутского народа сохранились в эпосе
